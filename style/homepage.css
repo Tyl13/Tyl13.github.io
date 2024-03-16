@@ -38,11 +38,13 @@
 	border-bottom: solid black;
 }
 
-a:link, a:visited {
-	color: white;
+.cs11{
+	a:link, a:visited {
+		color: white;
+	}
 }
 
-a:active, a:hover {
+cs11a:active, a:hover {
 	color:#FFB81C
 }
 
