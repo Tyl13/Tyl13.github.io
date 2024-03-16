@@ -38,6 +38,14 @@
 	border-bottom: solid black;
 }
 
+a:link, a:visited {
+	color: white;
+}
+
+a:active, a:hover {
+	color:#FFB81C
+}
+
 .location {
 	flex-grow: 3;
 	text-align: left;
