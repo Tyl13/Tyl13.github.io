@@ -34,6 +34,10 @@
 	padding-left: 2%;
 }
 
+.title {
+	border-bottom: solid black;
+}
+
 .location {
 	flex-grow: 3;
 	text-align: left;
