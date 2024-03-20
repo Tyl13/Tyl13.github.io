@@ -9,15 +9,10 @@
 	text-align: right;
 }
 
-.Row p {
-	font-size: smaller;
-}
-
 .Row {
-	grid-template-columns: 3fr 1fr;
-	p, li, .dates {
+	grid-template-columns: max-content 1fr;
+	p, .dates {
 		margin: 0;
-		padding: 0;
 	}
 }
 
@@ -47,6 +42,7 @@
 
 .Blurb {
 	margin-left: 1%;
+	text-indent: 1.5vi;
 }
 
 .dates,
@@ -57,7 +53,7 @@
 }
 
 .title {
-	border-bottom: solid black;
+	border-bottom: .25vi solid black;
 }
 
 a:link, a:visited {
@@ -75,9 +71,8 @@ a:active, a:hover {
 }
 
 .location {
-	text-align: left;
+	align-self: center;
 	padding-left: 1em;
-	align-self: flex-end;
 	grid-area: Location;
 }
 
@@ -85,16 +80,12 @@ a:active, a:hover {
 	grid-area: Duties;
 }
 
-.Job .Column {
-	flex-direction: column-reverse;
-}
-
 .progress {
 	width: 80%;
 	display: flex;
 	flex-direction: row;
 	background-color: var(--color-dark-blue);
-	border: 1px solid rgba(0, 0, 0, 0.8);
+	border: .1vi solid rgba(0, 0, 0, 0.8);
 	border-radius: 1em;
 	height: 1.25em;
 	margin-left: 5%;
@@ -128,14 +119,6 @@ a:active, a:hover {
 
 .Right {
 	grid-area: Sidebar;
-}
-
-.ssdspan {
-	white-space: pre-wrap;
-}
-
-.ssdimg {
-	display: flex;
 }
 
 .cs1 {
@@ -209,10 +192,6 @@ a:active, a:hover {
 	padding-left: 5%;
 }
 
-dl {
-	text-align: left;
-}
-
 ul {
 	padding-left: 2%;
 	text-align: left;
@@ -220,4 +199,8 @@ ul {
 
 li {
 	margin: 1% 0;
+}
+
+dd {
+	margin-inline-start: 1vi;
 }
