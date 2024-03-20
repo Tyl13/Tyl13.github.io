@@ -7,7 +7,6 @@
 
 .Awards .Row .dates {
 	text-align: right;
-	flex-grow: 2;
 }
 
 .Row p {
@@ -15,6 +14,7 @@
 }
 
 .Row {
+	grid-template-columns: 3fr 1fr;
 	p, li, .dates {
 		margin: 0;
 		padding: 0;
@@ -22,33 +22,34 @@
 }
 
 .page {
-	display: flex;
-	flex-direction: row;
-	position: relative;
+	display: grid;
 	border: solid .1vi black;
-	margin: auto auto 0 auto;
-	overflow: hidden;
 	font-size: 1.5vi;
 	font-family: Arial, Helvetica, sans-serif;
+	grid-template-areas: "Main Sidebar";
+	grid-template-columns: 3fr 1fr;
 }
 
 .Job {
 	margin-top: 2%;
+	grid-template-areas: 
+		"Title Location"
+		"Duties Duties"
+	;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr min-content;
+
 }
 
 .Job, .Row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	display: grid;
 }
 
 .Blurb {
 	margin-left: 1%;
-	text-wrap: balance;
 }
 
 .dates,
-.date,
 .title {
 	margin-bottom: inherit;
 	text-align: left;
@@ -74,27 +75,18 @@ a:active, a:hover {
 }
 
 .location {
-	flex-grow: 3;
 	text-align: left;
 	padding-left: 1em;
 	align-self: flex-end;
+	grid-area: Location;
 }
 
-.Column {
-	width: 25%;
-	display: flex;
-	flex-direction: column;
+.Information, dl {
+	grid-area: Duties;
 }
 
 .Job .Column {
 	flex-direction: column-reverse;
-}
-
-.History,
-.Contact,
-.Skills {
-	display: flex;
-	flex-direction: column;
 }
 
 .progress {
@@ -130,12 +122,12 @@ a:active, a:hover {
 }
 
 .Left {
-	width: 75%;
+	grid-area: Main;
 	margin: 0 2%;
 }
 
 .Right {
-	width: 25%;
+	grid-area: Sidebar;
 }
 
 .ssdspan {
@@ -147,7 +139,6 @@ a:active, a:hover {
 }
 
 .cs1 {
-	font-size: 1em;
 	color: #333333;
 }
 
@@ -169,21 +160,18 @@ a:active, a:hover {
 
 .cs4 {
 	margin-bottom: inherit;
-	font-size: 1em;
 	color: #333333;
 	font-style: italic;
 }
 
 .cs5 {
 	margin-bottom: inherit;
-	font-size: 1em;
 	color: #333333;
 	font-weight: bold;
 }
 
 .cs6 {
 	margin-bottom: inherit;
-	font-size: 1em;
 	color: #333333;
 }
 
@@ -219,13 +207,6 @@ a:active, a:hover {
 	font-size: 0.9em;
 	color: #ffffff;
 	padding-left: 5%;
-}
-
-.bar {
-	width: 100%;
-	background-color: lightgray;
-	margin-right: 0px;
-	height: 40%;
 }
 
 dl {
