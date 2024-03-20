@@ -3,10 +3,4 @@ package.json
 pnpm-lock.yaml
 .prettierrc
 .stylelintrc.json
-test_5.css
-test_6.css
-test_7.css
-test_7.css.map
-test.css
-test.css.map
-postcss.config.js
+test_css/*

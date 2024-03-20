@@ -5,12 +5,51 @@
     --color-gold: #ffb81c;
 }
 
-li {
-    margin: 1% 0;
+.Awards .Row .dates {
+	text-align: right;
+}
+
+.Row p {
+	font-size: smaller;
+}
+
+.Row {
+	grid-template-columns: 3fr 1fr;
+	p, li, .dates {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.page {
+	display: grid;
+	border: solid .1vi black;
+	font-size: 1.5vi;
+	font-family: Arial, Helvetica, sans-serif;
+	grid-template-areas: "Main Sidebar";
+	grid-template-columns: 3fr 1fr;
+}
+
+.Job {
+	margin-top: 2%;
+	grid-template-areas: 
+		"Title Location"
+		"Duties Duties"
+	;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr min-content;
+
+}
+
+.Job, .Row {
+	display: grid;
+}
+
+.Blurb {
+	margin-left: 1%;
 }
 
 .dates,
-.date,
 .title {
     margin-bottom: inherit;
     text-align: left;
@@ -68,9 +107,142 @@ a:visited {
     color: var(--color-bright-blue);
 }
 
-a:active,
-a:hover {
-    color: var(--color-gold);
+.cs11{
+	a:link, a:visited {
+		color: white;
+	}
+}
+
+a:active, a:hover {
+	color:var(--color-gold);
+}
+
+.location {
+	text-align: left;
+	padding-left: 1em;
+	align-self: flex-end;
+	grid-area: Location;
+}
+
+.Information, dl {
+	grid-area: Duties;
+}
+
+.Job .Column {
+	flex-direction: column-reverse;
+}
+
+.progress {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	background-color: var(--color-dark-blue);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	border-radius: 1em;
+	height: 1.25em;
+	margin-left: 5%;
+	overflow: hidden;
+}
+
+.progress .step {
+	flex-grow: 1;
+	color: var(--color-gold);;
+	-webkit-text-fill-color: var(--color-gold);;
+}
+
+.progress .step:not(:last-child) {
+	border-right: 1px rgba(0, 0, 0, 0.8);
+}
+
+.progress .step.complete {
+	background: var(--color-gold);;
+	color: var(--color-dark-blue);
+	-webkit-text-fill-color: var(--color-dark-blue);
+}
+
+.Contact.Skills {
+	background-color: var(--color-light-blue);
+}
+
+.Left {
+	grid-area: Main;
+	margin: 0 2%;
+}
+
+.Right {
+	grid-area: Sidebar;
+}
+
+.ssdspan {
+	white-space: pre-wrap;
+}
+
+.ssdimg {
+	display: flex;
+}
+
+.cs1 {
+	color: #333333;
+}
+
+.cs2 {
+	text-align: center;
+	margin-bottom: inherit;
+	font-size: 1.4em;
+	color: var(--color-light-blue);
+	font-weight: bold;
+	border-bottom: .05em black solid;
+}
+
+.cs3 {
+	margin-bottom: inherit;
+	font-size: 1.2em;
+	color: #333333;
+	font-weight: bold;
+}
+
+.cs4 {
+	margin-bottom: inherit;
+	color: #333333;
+	font-style: italic;
+}
+
+.cs5 {
+	margin-bottom: inherit;
+	color: #333333;
+	font-weight: bold;
+}
+
+.cs6 {
+	margin-bottom: inherit;
+	color: #333333;
+}
+
+.cs8 {
+	margin-bottom: inherit;
+	font-size: 2.5em;
+	color: var(--color-gold);;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 5%;
+}
+
+.cs9 {
+	margin-bottom: inherit;
+	font-size: 2em;
+	color: #ffffff;
+	background-color: var(--color-dark-blue);
+	font-weight: bold;
+	text-align: left;
+	padding-left: 5%;
+}
+
+.cs10 {
+	margin-bottom: inherit;
+	margin-left: 2%;
+	font-size: 0.9em;
+	color: #ffffff;
+	font-weight: bold;
 }
 
 .cs11 {
@@ -226,6 +398,7 @@ a:hover {
     font-weight: bold;
 }
 
+<<<<<<< HEAD
 .bar {
     width: 100%;
     background-color: lightgray;
@@ -233,6 +406,8 @@ a:hover {
     height: 40%;
 }
 
+=======
+>>>>>>> 18f6823 (Changed flexbox for some to grids)
 dl {
     text-align: left;
 }
