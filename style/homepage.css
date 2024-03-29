@@ -11,7 +11,7 @@
 	font-size: 1.5vi;
 	font-family: Arial, Helvetica, sans-serif;
 	grid-template-areas: ". main sidebar";
-	grid-template-columns: min-content 3fr 1fr;
+	grid-template-columns: min-content auto auto;
 	column-gap: 1%;
 }
 
