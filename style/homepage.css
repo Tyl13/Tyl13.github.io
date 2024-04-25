@@ -38,6 +38,12 @@ a:hover {
 }
 
 @media print {
+	.break {
+		break-before: page;
+	}
+}
+
+/* @media print {
 	:root {
 		--color-light-blue: gray;
 		--color-dark-blue: black;
@@ -53,7 +59,7 @@ a:hover {
 	.cs11 {
 		color: black;
 	}
-}
+} */
 
 li {
     margin: 1% 0;
